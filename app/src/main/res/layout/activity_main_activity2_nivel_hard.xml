@@ -5,7 +5,52 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/wallpaperprincipal"
-    tools:context=".MainActivity2_Nivel1">
+    tools:context=".MainActivity2_NivelHard">
+
+    <ImageView
+        android:id="@+id/iv_symbol_2"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="252dp"
+        app:layout_constraintStart_toEndOf="@+id/iv_numero2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/adicion" />
+
+    <ImageView
+        android:id="@+id/iv_symbol_1"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="252dp"
+        app:layout_constraintStart_toEndOf="@+id/iv_numero1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/adicion" />
+
+    <ImageView
+        android:id="@+id/iv_numero2"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="252dp"
+        app:layout_constraintStart_toEndOf="@+id/iv_symbol_1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/cero" />
+
+    <ImageView
+        android:id="@+id/iv_numero3"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="252dp"
+        app:layout_constraintStart_toEndOf="@+id/iv_symbol_2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/cero" />
+
+    <ImageView
+        android:id="@+id/iv_numero1"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="252dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/cero" />
 
     <TextView
         android:id="@+id/tv_manzanas"
@@ -33,46 +78,15 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/iv_numero1"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="220dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/cero" />
-
-    <ImageView
-        android:id="@+id/iv_numero2"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
-        android:layout_marginTop="220dp"
-        android:layout_marginEnd="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/cero" />
-
-    <ImageView
-        android:id="@+id/iv_symbol_1"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
-        android:layout_marginTop="220dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.491"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/adicion" />
-
-    <ImageView
         android:id="@+id/iv_manzana"
         android:layout_width="84dp"
         android:layout_height="40dp"
         android:layout_marginStart="108dp"
-        android:layout_marginTop="144dp"
+        android:layout_marginTop="156dp"
         android:contentDescription="TODO"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/tresvidas" />
+        app:srcCompat="@drawable/unavida" />
 
     <TextView
         android:id="@+id/tv_Nombre"

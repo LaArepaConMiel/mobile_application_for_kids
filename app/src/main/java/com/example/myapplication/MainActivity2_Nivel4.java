@@ -16,7 +16,6 @@ import android.widget.Toast;
 
 public class MainActivity2_Nivel4 extends AppCompatActivity {
 
-
     TextView tv_name, tv_score;
     ImageView iv_one, iv_two, iv_lives, iv_sym;
     EditText et_response;
@@ -39,7 +38,7 @@ public class MainActivity2_Nivel4 extends AppCompatActivity {
         iv_one = findViewById(R.id.iv_numero1);
         iv_two = findViewById(R.id.iv_numero2);
         et_response = findViewById(R.id.et_respuesta);
-        iv_sym = findViewById(R.id.iv_symbol);
+        iv_sym = findViewById(R.id.iv_symbol_1);
 
         player_name = getIntent().getStringExtra("jugador");
         tv_name.setText("jugador: " + player_name);

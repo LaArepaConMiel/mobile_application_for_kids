@@ -12,6 +12,7 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -23,6 +24,8 @@ public class MainActivity extends AppCompatActivity {
     ImageView iv_person;
     TextView tv_bestScore;
     Button btn_play;
+
+    Switch swt_hard;
 
     MediaPlayer mp;
 
@@ -37,6 +40,7 @@ public class MainActivity extends AppCompatActivity {
         et_name = findViewById(R.id.et_nombre);
         iv_person = findViewById(R.id.iv_Persona);
         tv_bestScore = findViewById(R.id.tv_best_score);
+        swt_hard = findViewById(R.id.switch_btn);
 
         setSupportActionBar(findViewById(R.id.myToolbar));
 
@@ -73,7 +77,7 @@ public class MainActivity extends AppCompatActivity {
         if(!name.equals("")){
             mp.stop();
             mp.release();
-            Intent intent = new Intent(this,MainActivity2_Nivel1.class);
+            Intent intent = (swt_hard.isChecked()) ? new Intent(this,MainActivity2_NivelHard.class)  : new Intent(this,MainActivity2_Nivel1.class);
             intent.putExtra("jugador",name);
             startActivity(intent);
             finish();
@@ -83,7 +87,5 @@ public class MainActivity extends AppCompatActivity {
             InputMethodManager imm = (InputMethodManager) getSystemService(this.INPUT_METHOD_SERVICE);
             imm.showSoftInput(et_name, InputMethodManager.SHOW_IMPLICIT);
         }
-
     }
-
 }

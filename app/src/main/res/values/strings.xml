@@ -3,6 +3,7 @@
     <string name="personaje">Personaje</string>
     <string name="et_nombre">Cómo te llamas?</string>
     <string name="btn_text">JUGAR</string>
+    <string name="swt_hard">MODO DIFÍCIL</string>
 
     //Nivel 1
 
