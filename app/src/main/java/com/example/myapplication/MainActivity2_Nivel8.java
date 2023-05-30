@@ -14,23 +14,38 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class MainActivity2_Nivel5 extends AppCompatActivity {
+public class MainActivity2_Nivel8 extends AppCompatActivity {
 
     TextView tv_name, tv_score;
     ImageView iv_one, iv_two, iv_lives, iv_sym;
     EditText et_response;
     MediaPlayer mp, mpGreat, mpBad;
-    int score, num_aleatory_one, num_aleatory_two, result, lives=3;
+    int score, num_aleatory_one, num_aleatory_two, sym_aleatory, result, lives=3;
     String player_name, string_score, string_lives;
 
     String numbers[] = {"cero","uno","dos","tres","cuatro","cinco","seis","siete","ocho","nueve","dies"};
 
+    int[] cantidades = {10,1,2,2,3,2,3,2,4,3,4};
+    int[][] combinaciones = {
+            {1,2,3,4,5,6,7,8,9,10}, //0
+            {1},                    //1
+            {1,2},                  //2
+            {1,3},                  //3
+            {1,2,4},                //4
+            {1,5},                  //5
+            {1,3,6},                //6
+            {1,7},                  //7
+            {1,2,4,8},              //8
+            {1,3,9},                //9
+            {1,2,5,10}              //10
+    };
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main_activity2_nivel5);
+        setContentView(R.layout.activity_main_activity2_nivel8);
 
-        Toast.makeText(this,"Nivel 5 - multiplicaciones", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this,"Nivel 7 - Multiplicaciones y Divisiones", Toast.LENGTH_SHORT).show();
 
         tv_name = findViewById(R.id.tv_Nombre);
         tv_score = findViewById(R.id.tv_score);
@@ -113,16 +128,43 @@ public class MainActivity2_Nivel5 extends AppCompatActivity {
         }
     }
     private void aleatoryNumber() {
-        if (score <= 49) {
+        if (score <= 79) {
+            sym_aleatory = (int) ((Math.random() * 10) % 4);
             num_aleatory_one = (int) (Math.random() * 10);
-            num_aleatory_two = (int) (Math.random() * 10);
-            result = num_aleatory_one * num_aleatory_two;
+            switch (sym_aleatory){
+                case 0: //suma
+                    num_aleatory_two = (int) (Math.random() * 10);
+                    result = num_aleatory_one + num_aleatory_two;
+                    iv_sym.setImageResource(R.drawable.adicion);
+                    break;
+                case 1: //resta
+                    num_aleatory_two = (int) (Math.random() * 10);
+                    result = num_aleatory_one - num_aleatory_two;
+                    if(result < 0){
+                        num_aleatory_one = num_aleatory_one + num_aleatory_two;
+                        num_aleatory_two = num_aleatory_one - num_aleatory_two;
+                        num_aleatory_one = num_aleatory_one - num_aleatory_two;
+                        result = num_aleatory_one - num_aleatory_two;
+                    }
+                    iv_sym.setImageResource(R.drawable.resta);
+                    break;
+                case 2: //multiplicacion
+                    num_aleatory_two = (int) (Math.random() * 10);
+                    result = num_aleatory_one * num_aleatory_two;
+                    iv_sym.setImageResource(R.drawable.multiplicacion);
+                    break;
+                case 3: //division
+                    num_aleatory_two = combinaciones[num_aleatory_one][(int)(Math.random() * 10) % cantidades[num_aleatory_one]];
+                    result = num_aleatory_one / num_aleatory_two;
+                    iv_sym.setImageResource(R.drawable.unavida);
+                    break;
+            }
             int id = getResources().getIdentifier(numbers[num_aleatory_one], "drawable", getPackageName());
             iv_one.setImageResource(id);
             id = getResources().getIdentifier(numbers[num_aleatory_two], "drawable", getPackageName());
             iv_two.setImageResource(id);
         } else {
-            Intent intent = new Intent(this, MainActivity2_Nivel6.class);
+            Intent intent = new Intent(this, MainActivity2_Fin.class);
             string_score = String.valueOf(score);
             string_lives = String.valueOf(lives);
             intent.putExtra("jugador", player_name);

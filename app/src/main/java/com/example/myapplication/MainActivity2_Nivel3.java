@@ -30,7 +30,7 @@ public class MainActivity2_Nivel3 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_activity2_nivel3);
 
-        Toast.makeText(this,"Nivel 2 - Sumas intermedias", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this,"Nivel 3 - Restas básicas", Toast.LENGTH_SHORT).show();
 
         tv_name = findViewById(R.id.tv_Nombre);
         tv_score = findViewById(R.id.tv_score);

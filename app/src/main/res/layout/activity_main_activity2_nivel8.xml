@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/wallpaperprincipal"
-    tools:context=".MainActivity2_Nivel5">
+    tools:context=".MainActivity2_Nivel8">
 
     <TextView
         android:id="@+id/tv_manzanas"
@@ -61,7 +61,7 @@
         app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/multiplicacion" />
+        app:srcCompat="@drawable/unavida" />
 
     <ImageView
         android:id="@+id/iv_manzana"

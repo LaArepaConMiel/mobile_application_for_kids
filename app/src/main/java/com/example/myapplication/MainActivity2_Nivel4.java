@@ -30,7 +30,7 @@ public class MainActivity2_Nivel4 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_activity2_nivel4);
 
-        Toast.makeText(this,"Nivel 2 - Sumas intermedias", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this,"Nivel 4 - Sumas y Restas", Toast.LENGTH_SHORT).show();
 
         tv_name = findViewById(R.id.tv_Nombre);
         tv_score = findViewById(R.id.tv_score);
@@ -136,7 +136,7 @@ public class MainActivity2_Nivel4 extends AppCompatActivity {
                 iv_sym.setImageResource(R.drawable.adicion);
             }
         }else{
-            Intent intent = new Intent(this,MainActivity2_Nivel4.class);
+            Intent intent = new Intent(this,MainActivity2_Nivel5.class);
             string_score = String.valueOf(score);
             string_lives = String.valueOf(lives);
             intent.putExtra("jugador", player_name);
