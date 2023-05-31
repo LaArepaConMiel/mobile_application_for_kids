@@ -5,24 +5,23 @@
     android:id="@+id/ConstraintLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/globos"
+    android:background="@drawable/fondoselva"
     tools:context=".MainActivity">
 
     <ImageView
         android:id="@+id/iv_Persona"
-        android:layout_width="250dp"
-        android:layout_height="250dp"
-        android:layout_marginTop="16dp"
+        android:layout_width="205dp"
+        android:layout_height="174dp"
+        android:layout_marginTop="84dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/myToolbar"
         app:srcCompat="@drawable/manzana" />
 
     <EditText
         android:id="@+id/et_nombre"
-        android:layout_width="300dp"
-        android:layout_height="50dp"
+        android:layout_width="253dp"
+        android:layout_height="55dp"
         android:layout_marginTop="16dp"
         android:background="@drawable/fondoet"
         android:ems="10"
@@ -30,8 +29,8 @@
         android:inputType="textPersonName"
         android:maxLength="18"
         android:textAlignment="center"
-        android:textColor="@color/colorPrimaryDark"
-        android:textColorHint="@color/colorPrimaryDark"
+        android:textColor="@color/black"
+        android:textColorHint="@color/teal_700"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
@@ -40,14 +39,14 @@
 
     <Button
         android:id="@+id/btn_jugar"
-        android:layout_width="300dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="36dp"
-        android:background="@drawable/fondoboton"
+        android:layout_width="253dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/fondoet"
         android:hint="@string/btn_text"
         android:onClick="play"
         android:text="@string/btn_text"
-        android:textColor="@color/icons"
+        android:textColor="@color/teal_700"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
@@ -58,13 +57,13 @@
         android:id="@+id/myToolbar"
         android:layout_width="match_parent"
         android:layout_height="56dp"
-        android:background="@color/colorPrimary"
+        android:background="@drawable/fondoet"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:titleTextColor="@color/icons" />
+        app:titleTextColor="@color/primary_text" />
 
     <TextView
         android:id="@+id/tv_best_score"
@@ -79,14 +78,14 @@
 
     <Switch
         android:id="@+id/switch_btn"
-        android:layout_width="300dp"
-        android:layout_height="50dp"
+        android:layout_width="253dp"
+        android:layout_height="55dp"
         android:layout_marginTop="20dp"
-        android:background="@drawable/fondoboton"
+        android:background="@drawable/fondoet"
         android:ellipsize="middle"
         android:text="@string/swt_hard"
         android:textAlignment="center"
-        android:textColor="@color/icons"
+        android:textColor="@color/teal_700"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"

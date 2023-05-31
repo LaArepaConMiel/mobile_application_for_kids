@@ -4,53 +4,58 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/wallpaperprincipal"
+    android:background="@drawable/fondojuego"
     tools:context=".MainActivity2_NivelHard">
-
-    <ImageView
-        android:id="@+id/iv_symbol_2"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_marginTop="252dp"
-        app:layout_constraintStart_toEndOf="@+id/iv_numero2"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/adicion" />
-
-    <ImageView
-        android:id="@+id/iv_symbol_1"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_marginTop="252dp"
-        app:layout_constraintStart_toEndOf="@+id/iv_numero1"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/adicion" />
-
-    <ImageView
-        android:id="@+id/iv_numero2"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_marginTop="252dp"
-        app:layout_constraintStart_toEndOf="@+id/iv_symbol_1"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/cero" />
 
     <ImageView
         android:id="@+id/iv_numero3"
         android:layout_width="80dp"
         android:layout_height="80dp"
-        android:layout_marginTop="252dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="292dp"
         app:layout_constraintStart_toEndOf="@+id/iv_symbol_2"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/cero" />
 
     <ImageView
+        android:id="@+id/iv_symbol_2"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="300dp"
+        app:layout_constraintStart_toEndOf="@+id/iv_numero2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/sumarp" />
+
+    <ImageView
         android:id="@+id/iv_numero1"
         android:layout_width="80dp"
         android:layout_height="80dp"
-        android:layout_marginTop="252dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="292dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/cero" />
+
+    <ImageView
+        android:id="@+id/iv_numero2"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="292dp"
+        app:layout_constraintStart_toEndOf="@+id/iv_symbol_1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/cero" />
+
+    <ImageView
+        android:id="@+id/iv_symbol_1"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="300dp"
+        app:layout_constraintStart_toEndOf="@+id/iv_numero1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/sumarp" />
 
     <TextView
         android:id="@+id/tv_manzanas"
@@ -58,6 +63,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:text="@string/et_vidas"
+        android:fontFamily="@font/turtles"
+        android:textColor="@color/black"
+        android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.107"
         app:layout_constraintStart_toStartOf="parent"
@@ -67,22 +75,38 @@
         android:id="@+id/button"
         android:layout_width="140dp"
         android:layout_height="48dp"
-        android:layout_marginTop="400dp"
-        android:layout_marginEnd="56dp"
-        android:background="@drawable/fondoboton"
+        android:layout_marginTop="472dp"
+        android:layout_marginEnd="52dp"
+        android:background="@drawable/fondoet"
         android:onClick="comparar"
         android:text="@string/botonSumar"
-        android:textColor="#0D47A1"
+        android:textColor="@color/teal_700"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/et_respuesta"
+        android:layout_width="140dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="472dp"
+        android:ems="10"
+        android:hint="@string/Respuesta"
+        android:fontFamily="@font/turtles"
+        android:textSize="25dp"
+        android:inputType="number"
+        android:textAlignment="center"
+        android:textColorHint="#616161"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/iv_manzana"
         android:layout_width="84dp"
         android:layout_height="40dp"
-        android:layout_marginStart="108dp"
-        android:layout_marginTop="156dp"
+        android:layout_marginStart="196dp"
+        android:layout_marginTop="212dp"
         android:contentDescription="TODO"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -94,6 +118,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="76dp"
         android:text="@string/jugadorNombre"
+        android:fontFamily="@font/turtles"
+        android:textColor="@color/black"
+        android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.101"
         app:layout_constraintStart_toStartOf="parent"
@@ -103,32 +130,21 @@
         android:id="@+id/tv_score"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/turtles"
         android:text="@string/totalScore"
+        android:textColor="@color/black"
+        android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintHorizontal_bias="0.103"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_Nombre" />
 
-    <EditText
-        android:id="@+id/et_respuesta"
-        android:layout_width="140dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="52dp"
-        android:layout_marginTop="400dp"
-        android:ems="10"
-        android:hint="@string/Respuesta"
-        android:inputType="number"
-        android:textAlignment="center"
-        android:textColorHint="#616161"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/myToolbar1"
-        android:layout_width="409dp"
-        android:layout_height="wrap_content"
-        android:background="@color/colorPrimary"
+        android:layout_width="464dp"
+        android:layout_height="43dp"
+        android:background="@drawable/fondoet"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
         app:layout_constraintEnd_toEndOf="parent"

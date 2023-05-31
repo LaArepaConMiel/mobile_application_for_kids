@@ -134,11 +134,11 @@ public class MainActivity2_Nivel7 extends AppCompatActivity {
             if(sym_aleatory == 0){ //multiplicacion
                 num_aleatory_two = (int) (Math.random() * 10);
                 result = num_aleatory_one * num_aleatory_two;
-                iv_sym.setImageResource(R.drawable.multiplicacion);
+                iv_sym.setImageResource(R.drawable.multiplicarrp);
             }else{ //division
                 num_aleatory_two = combinaciones[num_aleatory_one][(int)(Math.random() * 10) % cantidades[num_aleatory_one]];
                 result = num_aleatory_one / num_aleatory_two;
-                iv_sym.setImageResource(R.drawable.unavida);
+                iv_sym.setImageResource(R.drawable.divisionrp);
             }
             int id = getResources().getIdentifier(numbers[num_aleatory_one], "drawable", getPackageName());
             iv_one.setImageResource(id);

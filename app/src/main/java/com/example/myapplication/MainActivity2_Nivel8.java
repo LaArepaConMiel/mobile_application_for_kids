@@ -135,7 +135,7 @@ public class MainActivity2_Nivel8 extends AppCompatActivity {
                 case 0: //suma
                     num_aleatory_two = (int) (Math.random() * 10);
                     result = num_aleatory_one + num_aleatory_two;
-                    iv_sym.setImageResource(R.drawable.adicion);
+                    iv_sym.setImageResource(R.drawable.sumarp);
                     break;
                 case 1: //resta
                     num_aleatory_two = (int) (Math.random() * 10);
@@ -146,17 +146,17 @@ public class MainActivity2_Nivel8 extends AppCompatActivity {
                         num_aleatory_one = num_aleatory_one - num_aleatory_two;
                         result = num_aleatory_one - num_aleatory_two;
                     }
-                    iv_sym.setImageResource(R.drawable.resta);
+                    iv_sym.setImageResource(R.drawable.restarp);
                     break;
                 case 2: //multiplicacion
                     num_aleatory_two = (int) (Math.random() * 10);
                     result = num_aleatory_one * num_aleatory_two;
-                    iv_sym.setImageResource(R.drawable.multiplicacion);
+                    iv_sym.setImageResource(R.drawable.multiplicarrp);
                     break;
                 case 3: //division
                     num_aleatory_two = combinaciones[num_aleatory_one][(int)(Math.random() * 10) % cantidades[num_aleatory_one]];
                     result = num_aleatory_one / num_aleatory_two;
-                    iv_sym.setImageResource(R.drawable.unavida);
+                    iv_sym.setImageResource(R.drawable.divisionrp);
                     break;
             }
             int id = getResources().getIdentifier(numbers[num_aleatory_one], "drawable", getPackageName());

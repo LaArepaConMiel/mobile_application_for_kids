@@ -4,17 +4,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/wallpaperprincipal"
+    android:background="@drawable/fondojuego"
     tools:context=".MainActivity2_Nivel1">
 
     <TextView
         android:id="@+id/tv_manzanas"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/turtles"
         android:text="@string/et_vidas"
+        android:textColor="@color/black"
+        android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.107"
+        app:layout_constraintHorizontal_bias="0.062"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_score" />
 
@@ -22,12 +25,12 @@
         android:id="@+id/button"
         android:layout_width="140dp"
         android:layout_height="48dp"
-        android:layout_marginTop="400dp"
-        android:layout_marginEnd="56dp"
-        android:background="@drawable/fondoboton"
+        android:layout_marginTop="460dp"
+        android:layout_marginEnd="52dp"
+        android:background="@drawable/fondoet"
         android:onClick="comparar"
         android:text="@string/botonSumar"
-        android:textColor="#0D47A1"
+        android:textColor="@color/teal_700"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -36,8 +39,8 @@
         android:id="@+id/iv_numero1"
         android:layout_width="120dp"
         android:layout_height="120dp"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="220dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="284dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/cero" />
@@ -46,7 +49,7 @@
         android:id="@+id/iv_numero2"
         android:layout_width="120dp"
         android:layout_height="120dp"
-        android:layout_marginTop="220dp"
+        android:layout_marginTop="284dp"
         android:layout_marginEnd="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -54,21 +57,20 @@
 
     <ImageView
         android:id="@+id/iv_symbol_1"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
-        android:layout_marginTop="220dp"
+        android:layout_width="93dp"
+        android:layout_height="102dp"
+        android:layout_marginTop="300dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/adicion" />
+        app:srcCompat="@drawable/sumarp" />
 
     <ImageView
         android:id="@+id/iv_manzana"
         android:layout_width="84dp"
         android:layout_height="40dp"
-        android:layout_marginStart="108dp"
-        android:layout_marginTop="144dp"
+        android:layout_marginStart="188dp"
+        android:layout_marginTop="224dp"
         android:contentDescription="TODO"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -76,23 +78,29 @@
 
     <TextView
         android:id="@+id/tv_Nombre"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="76dp"
+        android:layout_width="164dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="36dp"
+        android:fontFamily="@font/turtles"
         android:text="@string/jugadorNombre"
+        android:textColor="@color/black"
+        android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.101"
+        app:layout_constraintHorizontal_bias="0.064"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/myToolbar1" />
 
     <TextView
         android:id="@+id/tv_score"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_width="124dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/turtles"
         android:text="@string/totalScore"
+        android:textColor="@color/black"
+        android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintHorizontal_bias="0.055"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_Nombre" />
 
@@ -100,10 +108,12 @@
         android:id="@+id/et_respuesta"
         android:layout_width="140dp"
         android:layout_height="48dp"
-        android:layout_marginStart="52dp"
-        android:layout_marginTop="400dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="460dp"
         android:ems="10"
         android:hint="@string/Respuesta"
+        android:textSize="25dp"
+        android:fontFamily="@font/turtles"
         android:inputType="number"
         android:textAlignment="center"
         android:textColorHint="#616161"
@@ -112,12 +122,14 @@
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/myToolbar1"
-        android:layout_width="409dp"
-        android:layout_height="wrap_content"
-        android:background="@color/colorPrimary"
+        android:layout_width="418dp"
+        android:layout_height="53dp"
+        android:background="@drawable/fondoet"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 </androidx.constraintlayout.widget.ConstraintLayout>

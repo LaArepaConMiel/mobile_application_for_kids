@@ -190,30 +190,30 @@ public class MainActivity2_NivelHard extends AppCompatActivity {
 
                 switch (first_operation){
                     case 0:
-                        iv_operation_one.setImageResource(R.drawable.adicion);
+                        iv_operation_one.setImageResource(R.drawable.sumarp);
                         break;
                     case 1:
-                        iv_operation_one.setImageResource(R.drawable.resta);
+                        iv_operation_one.setImageResource(R.drawable.restarp);
                         break;
                     case 2:
-                        iv_operation_one.setImageResource(R.drawable.multiplicacion);
+                        iv_operation_one.setImageResource(R.drawable.multiplicarrp);
                         break;
                     case 3:
-                        iv_operation_one.setImageResource(R.drawable.unavida);
+                        iv_operation_one.setImageResource(R.drawable.divisionrp);
                         break;
                 }
                 switch (second_operation){
                     case 0:
-                        iv_operation_two.setImageResource(R.drawable.adicion);
+                        iv_operation_two.setImageResource(R.drawable.sumarp);
                         break;
                     case 1:
-                        iv_operation_two.setImageResource(R.drawable.resta);
+                        iv_operation_two.setImageResource(R.drawable.restarp);
                         break;
                     case 2:
-                        iv_operation_two.setImageResource(R.drawable.multiplicacion);
+                        iv_operation_two.setImageResource(R.drawable.multiplicarrp);
                         break;
                     case 3:
-                        iv_operation_two.setImageResource(R.drawable.unavida);
+                        iv_operation_two.setImageResource(R.drawable.divisionrp);
                         break;
                 }
             }

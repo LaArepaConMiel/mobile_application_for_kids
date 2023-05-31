@@ -124,7 +124,7 @@ public class MainActivity2_Nivel4 extends AppCompatActivity {
                     iv_one.setImageResource(id);
                     id = getResources().getIdentifier(numbers[num_aleatory_two],"drawable",getPackageName());
                     iv_two.setImageResource(id);
-                    iv_sym.setImageResource(R.drawable.resta);
+                    iv_sym.setImageResource(R.drawable.sumarp);
                 }else{
                     aleatoryNumber();
                 }
@@ -133,7 +133,7 @@ public class MainActivity2_Nivel4 extends AppCompatActivity {
                 iv_one.setImageResource(id);
                 id = getResources().getIdentifier(numbers[num_aleatory_two],"drawable",getPackageName());
                 iv_two.setImageResource(id);
-                iv_sym.setImageResource(R.drawable.adicion);
+                iv_sym.setImageResource(R.drawable.restarp);
             }
         }else{
             Intent intent = new Intent(this,MainActivity2_Nivel5.class);
