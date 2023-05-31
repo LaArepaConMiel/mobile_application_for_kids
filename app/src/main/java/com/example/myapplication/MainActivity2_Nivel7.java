@@ -114,7 +114,9 @@ public class MainActivity2_Nivel7 extends AppCompatActivity {
                         Toast.makeText(this, "has perdido todas tus manzanas", Toast.LENGTH_SHORT).show();
                         mp.stop();
                         mp.release();
-                        Intent intent = new Intent(this,MainActivity.class);
+                        Intent intent = new Intent(this,MainActivity2_Lose.class);
+                        intent.putExtra("jugador", player_name);
+                        intent.putExtra("score", String.valueOf(score));
                         startActivity(intent);
                         finish();
                         break;

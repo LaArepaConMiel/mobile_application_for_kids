@@ -80,7 +80,9 @@ public class MainActivity2_Nivel1 extends AppCompatActivity {
                         Toast.makeText(this, "has perdido todas tus manzanas", Toast.LENGTH_SHORT).show();
                         mp.stop();
                         mp.release();
-                        Intent intent = new Intent(this,MainActivity.class);
+                        Intent intent = new Intent(this,MainActivity2_Lose.class);
+                        intent.putExtra("jugador", player_name);
+                        intent.putExtra("score", String.valueOf(score));
                         startActivity(intent);
                         finish();
                         break;
@@ -95,17 +97,15 @@ public class MainActivity2_Nivel1 extends AppCompatActivity {
     }
     private void aleatoryNumber(){
         if(score <= 9){
-            num_aleatory_one = (int) (Math.random() * 10);
-            num_aleatory_two = (int) (Math.random() * 10);
-            result = num_aleatory_one + num_aleatory_two;
-            if(result <= 10){
-                int id = getResources().getIdentifier(numbers[num_aleatory_one],"drawable",getPackageName());
-                iv_one.setImageResource(id);
-                id = getResources().getIdentifier(numbers[num_aleatory_two],"drawable",getPackageName());
-                iv_two.setImageResource(id);
-            }else{
-                aleatoryNumber();
-            }
+            do{
+                num_aleatory_one = (int) (Math.random() * 10);
+                num_aleatory_two = (int) (Math.random() * 10);
+                result = num_aleatory_one + num_aleatory_two;
+            }while(result > 10);
+            int id = getResources().getIdentifier(numbers[num_aleatory_one],"drawable",getPackageName());
+            iv_one.setImageResource(id);
+            id = getResources().getIdentifier(numbers[num_aleatory_two],"drawable",getPackageName());
+            iv_two.setImageResource(id);
         }else{
             Intent intent = new Intent(this,MainActivity2_Nivel2.class);
             string_score = String.valueOf(score);

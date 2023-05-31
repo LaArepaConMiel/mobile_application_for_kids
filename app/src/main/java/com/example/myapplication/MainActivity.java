@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
 
     MediaPlayer mp;
 
-    int numeroAleatorio = (int)(Math.random() * 10);
+    int numeroAleatorio = (int)((Math.random() * 10) % 5);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
         mp.start();
         mp.setLooping(true);
 
-        String frutas[] = {"mango","fresa","manzana","sandia","uva","uva","uva","sandia","manzana","fresa","mango"};
+        String frutas[] = {"mango","fresa","manzana","sandia","uva"};
         int id;
         id = getResources().getIdentifier(frutas[numeroAleatorio],"drawable",getPackageName());
         iv_person.setImageResource(id);

@@ -12,6 +12,9 @@
         android:theme="@style/Theme.AppCompat.Light.NoActionBar"
         tools:targetApi="31">
         <activity
+            android:name=".MainActivity2_Lose"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity2_Fin"
             android:exported="false" />
         <activity

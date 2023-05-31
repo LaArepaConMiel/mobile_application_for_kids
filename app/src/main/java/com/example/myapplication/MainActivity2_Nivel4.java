@@ -99,7 +99,9 @@ public class MainActivity2_Nivel4 extends AppCompatActivity {
                         Toast.makeText(this, "has perdido todas tus manzanas", Toast.LENGTH_SHORT).show();
                         mp.stop();
                         mp.release();
-                        Intent intent = new Intent(this,MainActivity.class);
+                        Intent intent = new Intent(this,MainActivity2_Lose.class);
+                        intent.putExtra("jugador", player_name);
+                        intent.putExtra("score", String.valueOf(score));
                         startActivity(intent);
                         finish();
                         break;
@@ -119,21 +121,25 @@ public class MainActivity2_Nivel4 extends AppCompatActivity {
 
             if(num_aleatory_one > 0 && num_aleatory_two <= 4){
                 result = num_aleatory_one - num_aleatory_two;
-                if(result >= 0){
-                    int id = getResources().getIdentifier(numbers[num_aleatory_one],"drawable",getPackageName());
-                    iv_one.setImageResource(id);
-                    id = getResources().getIdentifier(numbers[num_aleatory_two],"drawable",getPackageName());
-                    iv_two.setImageResource(id);
-                    iv_sym.setImageResource(R.drawable.sumarp);
-                }else{
-                    aleatoryNumber();
+                result = num_aleatory_one - num_aleatory_two;
+                if(result < 0){
+                    num_aleatory_one = num_aleatory_one + num_aleatory_two;
+                    num_aleatory_two = num_aleatory_one - num_aleatory_two;
+                    num_aleatory_one = num_aleatory_one - num_aleatory_two;
+                    result = num_aleatory_one - num_aleatory_two;
                 }
-            }else{
                 int id = getResources().getIdentifier(numbers[num_aleatory_one],"drawable",getPackageName());
                 iv_one.setImageResource(id);
                 id = getResources().getIdentifier(numbers[num_aleatory_two],"drawable",getPackageName());
                 iv_two.setImageResource(id);
                 iv_sym.setImageResource(R.drawable.restarp);
+            }else{
+                result = num_aleatory_one + num_aleatory_two;
+                int id = getResources().getIdentifier(numbers[num_aleatory_one],"drawable",getPackageName());
+                iv_one.setImageResource(id);
+                id = getResources().getIdentifier(numbers[num_aleatory_two],"drawable",getPackageName());
+                iv_two.setImageResource(id);
+                iv_sym.setImageResource(R.drawable.sumarp);
             }
         }else{
             Intent intent = new Intent(this,MainActivity2_Nivel5.class);
