@@ -12,11 +12,70 @@
         android:id="@+id/iv_Persona"
         android:layout_width="205dp"
         android:layout_height="174dp"
-        android:layout_marginTop="84dp"
+        android:layout_marginTop="48dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/myToolbar"
         app:srcCompat="@drawable/manzana" />
+
+    <Button
+        android:id="@+id/btn_jugar"
+        android:layout_width="253dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/fondoet"
+        android:hint="@string/btn_text"
+        android:onClick="play"
+        android:text="@string/btn_text"
+        android:textColor="@color/teal_700"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_nombre" />
+
+    <TextView
+        android:id="@+id/tv_best_score"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="92dp"
+        android:background="@drawable/fondoet"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_jugar" />
+
+    <Button
+        android:id="@+id/btn_MiniJuego"
+        android:layout_width="253dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/fondoet"
+        android:hint="@string/boton_init_play"
+        android:onClick="play"
+        android:text="@string/boton_init_play"
+        android:textColor="@color/teal_700"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.569"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_best_score" />
+
+    <Switch
+        android:id="@+id/switch_btn"
+        android:layout_width="253dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/fondoet"
+        android:ellipsize="middle"
+        android:text="@string/swt_hard"
+        android:textAlignment="center"
+        android:textColor="@color/teal_700"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_jugar" />
 
     <EditText
         android:id="@+id/et_nombre"
@@ -33,25 +92,8 @@
         android:textColorHint="@color/teal_700"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/iv_Persona" />
-
-    <Button
-        android:id="@+id/btn_jugar"
-        android:layout_width="253dp"
-        android:layout_height="55dp"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/fondoet"
-        android:hint="@string/btn_text"
-        android:onClick="play"
-        android:text="@string/btn_text"
-        android:textColor="@color/teal_700"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_nombre" />
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/myToolbar"
@@ -60,35 +102,10 @@
         android:background="@drawable/fondoet"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
+        android:fontFamily="@font/orangejuice"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:titleTextColor="@color/primary_text" />
 
-    <TextView
-        android:id="@+id/tv_best_score"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginTop="88dp"
-        android:background="@drawable/fondoet"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_jugar" />
-
-    <Switch
-        android:id="@+id/switch_btn"
-        android:layout_width="253dp"
-        android:layout_height="55dp"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/fondoet"
-        android:ellipsize="middle"
-        android:text="@string/swt_hard"
-        android:textAlignment="center"
-        android:textColor="@color/teal_700"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_jugar" />
 </androidx.constraintlayout.widget.ConstraintLayout>

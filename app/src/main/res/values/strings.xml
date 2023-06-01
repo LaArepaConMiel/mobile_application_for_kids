@@ -12,4 +12,11 @@
     <string name="totalScore">Score: 0</string>
     <string name="botonSumar">Comprobar</string>
     <string name="Respuesta">Respuesta</string>
+
+    //MiniJuego
+    <string name="boton_init_play">Mini Juego</string>
+    <string name="boton_init_quit">Salir</string>
+    <string name="boton_juego_reinit">Reiniciar</string>
+    <string name="boton_juego_quit">Salir</string>
+
 </resources>

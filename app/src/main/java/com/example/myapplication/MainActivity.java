@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
     EditText et_name;
     ImageView iv_person;
     TextView tv_bestScore;
-    Button btn_play;
+    Button btn_play, btn_miniJuego;
 
     Switch swt_hard;
 
@@ -41,7 +41,14 @@ public class MainActivity extends AppCompatActivity {
         iv_person = findViewById(R.id.iv_Persona);
         tv_bestScore = findViewById(R.id.tv_best_score);
         swt_hard = findViewById(R.id.switch_btn);
+        btn_miniJuego = findViewById(R.id.btn_MiniJuego);
 
+        btn_miniJuego.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                iniciarMiniJuego();
+            }
+        });
         setSupportActionBar(findViewById(R.id.myToolbar));
 
         getSupportActionBar().setDisplayShowHomeEnabled(true);
@@ -87,5 +94,9 @@ public class MainActivity extends AppCompatActivity {
             InputMethodManager imm = (InputMethodManager) getSystemService(this.INPUT_METHOD_SERVICE);
             imm.showSoftInput(et_name, InputMethodManager.SHOW_IMPLICIT);
         }
+    }
+    private void iniciarMiniJuego(){
+        Intent i = new Intent(this, MainActivity2_MiniJuego.class);
+        startActivity(i);
     }
 }
