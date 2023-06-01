@@ -39,6 +39,8 @@ public class MainActivity2_Nivel1 extends AppCompatActivity {
         iv_two = findViewById(R.id.iv_numero2);
         et_response = findViewById(R.id.et_respuesta);
 
+
+
         player_name = getIntent().getStringExtra("jugador");
         tv_name.setText("jugador: " + player_name);
 

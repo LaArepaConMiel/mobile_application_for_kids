@@ -1,6 +1,7 @@
 package com.example.myapplication;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
@@ -91,7 +92,7 @@ public class MainActivity2_MiniJuego extends Activity {
         botonSalir.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                finish();
+                salir();
             }
         });
     }
@@ -203,6 +204,10 @@ public class MainActivity2_MiniJuego extends Activity {
             });
         }
 
+    }
+    private void salir(){
+        Intent i = new Intent(this, MainActivity.class);
+        startActivity(i);
     }
 
 }
