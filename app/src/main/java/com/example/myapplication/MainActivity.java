@@ -1,6 +1,7 @@
 package com.example.myapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.room.Room;
 
 import android.content.Intent;
 import android.database.Cursor;
@@ -54,6 +55,12 @@ public class MainActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         getSupportActionBar().setIcon(R.mipmap.ic_launcher);
 
+        DataBase db = Room.databaseBuilder(getApplicationContext(),
+                DataBase.class, "dataBase").allowMainThreadQueries().build();
+
+        Score easy = db.scoreDAO().getEasyScore();
+        Score hard = db.scoreDAO().getHardScore();
+        /*
         AdminSQLiteOpenHelper admin= new AdminSQLiteOpenHelper(this,"BD",null,1);
         SQLiteDatabase BD = admin.getWritableDatabase();
 
@@ -67,6 +74,7 @@ public class MainActivity extends AppCompatActivity {
             tv_bestScore.setText("Record: " + temp_score + " " + temp_name);
         }
         BD.close();
+        */
 
         mp = MediaPlayer.create(this,R.raw.alphabet_song);
         mp.start();

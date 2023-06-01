@@ -101,12 +101,13 @@ public class MainActivity2_Nivel3 extends AppCompatActivity {
                         Intent intent = new Intent(this,MainActivity2_Lose.class);
                         intent.putExtra("jugador", player_name);
                         intent.putExtra("score", String.valueOf(score));
+                        intent.putExtra("mode",0);
                         startActivity(intent);
                         finish();
                         break;
                 }
             }
-            DataBase();
+            //DataBase();
             et_response.setText("");
             aleatoryNumber();
         }else{
@@ -139,32 +140,6 @@ public class MainActivity2_Nivel3 extends AppCompatActivity {
             mp.release();
             startActivity(intent);
             finish();
-        }
-    }
-
-    public void DataBase(){
-        AdminSQLiteOpenHelper admin= new AdminSQLiteOpenHelper(this,"BD",null,1);
-        SQLiteDatabase BD = admin.getWritableDatabase();
-        Cursor query = BD.rawQuery(
-                "select * from puntaje where score = (select max(score) from puntaje)", null
-        );
-        if(query.moveToFirst()) {
-            String temp_name = query.getString(0);
-            String temp_score = query.getString(1);
-
-            int bestScore = Integer.parseInt(temp_score);
-
-            if(score > bestScore){
-                ContentValues modify = new ContentValues();
-                modify.put("nombre",player_name);
-                modify.put("score",score);
-                BD.update("puntaje",modify,"score=" + bestScore,null);
-            }
-        }else{
-            ContentValues insert = new ContentValues();
-            insert.put("nombre",player_name);
-            insert.put("score",score);
-            BD.insert("puntaje",null,insert);
         }
     }
 
