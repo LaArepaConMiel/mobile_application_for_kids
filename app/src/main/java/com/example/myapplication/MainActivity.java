@@ -60,21 +60,15 @@ public class MainActivity extends AppCompatActivity {
 
         Score easy = db.scoreDAO().getEasyScore();
         Score hard = db.scoreDAO().getHardScore();
-        /*
-        AdminSQLiteOpenHelper admin= new AdminSQLiteOpenHelper(this,"BD",null,1);
-        SQLiteDatabase BD = admin.getWritableDatabase();
-
-        Cursor consulta = BD.rawQuery(
-                "select * from puntaje where score = (select max(score) from puntaje)", null
-        );
-
-        if(consulta.moveToFirst()){
-            String temp_name = consulta.getString(0);
-            String temp_score = consulta.getString(1);
-            tv_bestScore.setText("Record: " + temp_score + " " + temp_name);
+        String puntaje = "Mejores Puntuaciones\n\n";
+        if(easy != null){
+            puntaje = puntaje + "MODO FÁCIL: " + easy.playerName + " " + easy.playerScore + "\n";
         }
-        BD.close();
-        */
+        if(hard != null){
+            puntaje = puntaje + "MODO DIFÍCIL: " + hard.playerName + " " + hard.playerScore;
+        }
+
+        tv_bestScore.setText(puntaje);
 
         mp = MediaPlayer.create(this,R.raw.alphabet_song);
         mp.start();

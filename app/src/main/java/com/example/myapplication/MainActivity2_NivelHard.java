@@ -22,7 +22,7 @@ public class MainActivity2_NivelHard extends AppCompatActivity {
     EditText et_response;
     MediaPlayer mp, mpGreat, mpBad;
     int score, num_aleatory_one, num_aleatory_two, num_aleatory_three, result;
-    String player_name;
+    String player_name, string_mode, string_score;
 
     String numbers[] = {"cero","uno","dos","tres","cuatro","cinco","seis","siete","ocho","nueve","dies"};
 
@@ -90,13 +90,14 @@ public class MainActivity2_NivelHard extends AppCompatActivity {
                 mp.stop();
                 mp.release();
                 Intent intent = new Intent(this,MainActivity2_Lose.class);
+                string_score = String.valueOf(score);
+                string_mode = "1";
                 intent.putExtra("jugador", player_name);
-                intent.putExtra("score", String.valueOf(score));
-                intent.putExtra("mode",1);
+                intent.putExtra("score", string_score);
+                intent.putExtra("mode", string_mode);
                 startActivity(intent);
                 finish();
             }
-            //DataBase();
             et_response.setText("");
             aleatoryNumber();
         }else{

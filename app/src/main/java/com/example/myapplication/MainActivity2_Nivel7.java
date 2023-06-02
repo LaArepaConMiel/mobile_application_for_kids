@@ -21,7 +21,7 @@ public class MainActivity2_Nivel7 extends AppCompatActivity {
     EditText et_response;
     MediaPlayer mp, mpGreat, mpBad;
     int score, num_aleatory_one, num_aleatory_two, sym_aleatory, result, lives=3;
-    String player_name, string_score, string_lives;
+    String player_name, string_score, string_lives, string_mode;
 
     String numbers[] = {"cero","uno","dos","tres","cuatro","cinco","seis","siete","ocho","nueve","dies"};
 
@@ -115,9 +115,11 @@ public class MainActivity2_Nivel7 extends AppCompatActivity {
                         mp.stop();
                         mp.release();
                         Intent intent = new Intent(this,MainActivity2_Lose.class);
+                        string_score = String.valueOf(score);
+                        string_mode = "0";
                         intent.putExtra("jugador", player_name);
-                        intent.putExtra("score", String.valueOf(score));
-                        intent.putExtra("mode",0);
+                        intent.putExtra("score", string_score);
+                        intent.putExtra("mode", string_mode);
                         startActivity(intent);
                         finish();
                         break;

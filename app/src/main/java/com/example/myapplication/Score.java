@@ -19,6 +19,9 @@ public class Score{
     @ColumnInfo(name = "hard_score")
     public int hardScore;
 
+    public Score() {
+    }
+
     public Score(int id, String playerName, int playerScore, int hardScore) {
         this.id = id;
         this.playerName = playerName;
